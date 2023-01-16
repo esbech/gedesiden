@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gede siden</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .red {
+            color: rgb(255, 0, 183);
+            font-size: 12px;
+            background-color: rgb(0, 255, 13);
+            border: 3px solid rgb(0, 213, 255);
+        }
+
+        .facts {
+            color: gold;
+        }
+    </style>
+
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function showGoatFact() {
+            var goatFactList = [
+                'En ged bliver typisk 15-18 år.',
+                'En ged er typisk drægtig i 150 dage om året.',
+                'En ged bliver videnskabeligt kaldt "Capra aegagrus hircus"',
+                'En ged er god til at svømme',
+                'Der findes Geder i næsten alle verdens lande og man mener, at der findes mere end 860 millioner geder i hele verden',
+                'En gedeflok består af 5-20 geder, med en hun-ged som overhovede',
+                'Nogle gedearter (f.eks. bjerggeder) kan springe 3,5 meter og hoppe op til 1,5 meter op i luften',
+                'Geder har en horisontal pupil, og kan derfor se 320 grader omkring sig',
+                'Verdens ældste ged blev 24 år gammel'
+
+        '
+            
+            ];
+
+
+            var selectedGoatFact = goatFactList[getRandomInt(3)];
+
+            document.getElementById("goatFact").innerHTML = selectedGoatFact;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <!-- Titel section -->
+        <header class="red blue green" id="main">
+            <h1>Ged</h1>
+            <h2>Alt om en ged</h2>
+            </p>
+        </header>
+
+        <div>
+            <button type="button" onclick="showGoatFact()">gede fact</button>
+            <div>
+                <p>Fact:</p>
+                <p class="facts" id="goatFact"></p>
+            </div>
+        </div>
+
+        <!-- Text section -->
+        <div>
+            <p>En ged kan være både sød og nuttet...</p>
+            <img src="grim ged.jpg" width="300">
+            <p>Men også mega grim</p>
+            <img src="ged.jpg" width="300">
+            <p> Mange kender en ged for at være et dyr man kan klappe i zoo, eller et dyr på en bondegård, som bare står
+                og ser dum ud, og lugter.
+                Men der kan jeg så informere om, at de har... Fuldstændigt ret.
+
+                Ja du hørte rigtigt. En ged kan være utruligt sød (og dum) men den kan egentlig ikke bruges til så
+                meget, udover at den laver mælk, men det har vi køer til.
+                Så hvorfor iksistere de her nuttede, men knap så godt lugtende dyr?
+
+                Her er lidt om gedens historie:
+                Den nedstammer fra bezoargeden, der for 8000-9000 år siden var et af de første dyr, der blev
+                domesticeret af mennesket.
+
+                Jeg går ud fra at folk tæmmede den fordi den er et nemt offer, og fordi den både kan give mad og mælk,
+                og et godt grin en gang imellem.
+
+                Personligt ville jeg være kæmpe fan af at man lavede noget superhero fiction bare med geder, f.eks.
+                spiderged eller superged.
+
+
+
+
+
+            </p>
+            <img src="spiderged.jpg">
+            <img src="superged.jpg" width="300">
+
+            <footer>
+                <div style="display:flex; justify-content: center;">
+                    <section style="margin-right: 10px;">
+                        <h3>Info om geder</h3>
+                        <a href="https://www.123fakta.com/da/fakta-om-geder" target="_blank">Facts om geder og ders mælk</a>
+                    </section>
+
+                    <section>
+                        <h3>Andre "G.O.A.T.'s"</h3>
+                        <a href="https://da.wikipedia.org/wiki/Lionel_Messi" target="_blank">Lionel Messi</a>
+                        <a href="https://en.wikipedia.org/wiki/Tiger_Woods" targets="_blank">Tiger Woods</a>
+                        <a href="https://en.wikipedia.org/wiki/Michael_Jordan" target="_blank">Michael Jorden</a>
+                        
+
+                    </section>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
