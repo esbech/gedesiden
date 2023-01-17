@@ -10,11 +10,39 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        button{
+            color: rgb(255, 0, 140);
+            background-color: black;
+            border: 3px solid rgb(255, 0, 140);
+            border-radius: 5px;
+            transition: ease-in-out all .3s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.5;
+        }
+
         .red {
             color: rgb(255, 0, 183);
             font-size: 12px;
             background-color: rgb(0, 255, 13);
             border: 3px solid rgb(0, 213, 255);
+        }
+
+        .gede_kassen{
+            background-color: greenyellow;
+            border: 3px dashed black;
+            min-height:200px;
+            width: 300px;
+
+        
+        
+        }
+
+        .GoatKasse {
+            display: flex;
+            flex-direction: column;
         }
 
         .facts {
@@ -23,6 +51,16 @@
     </style>
 
     <script>
+        function showFavoriteGoat(){
+            console.log("min favorit ged")
+            var minFarvoritGed= '<img src="the-goat.jpg" width="300">';
+            var falskFavoritGed = '<img src="yndlings ged.jpg" width="300">';
+
+            var currentGoat = document.getElementById("flere").innerHTML;
+            document.getElementById("flere").innerHTML = currentGoat === minFarvoritGed ? falskFavoritGed : minFarvoritGed;
+
+        }
+
         function getRandomInt(max) {
             return Math.floor(Math.random() * max);
         }
@@ -68,6 +106,10 @@
 
         <!-- Text section -->
         <div>
+            <button onclick="showFavoriteGoat()"> vis min yndlings ged</button> 
+            <div class="gede_kassen" id="flere">
+                <img src="yndlings ged.jpg" width="300">
+            </div>
             <p>En ged kan være både sød og nuttet...</p>
             <img src="grim ged.jpg" width="300">
             <p>Men også mega grim</p>
@@ -97,20 +139,21 @@
             </p>
             <img src="spiderged.jpg">
             <img src="superged.jpg" width="300">
-
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Dp0Bt2cbcc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <footer>
                 <div style="display:flex; justify-content: center;">
                     <section style="margin-right: 10px;">
                         <h3>Info om geder</h3>
-                        <a href="https://www.123fakta.com/da/fakta-om-geder" target="_blank">Facts om geder og ders mælk</a>
+                        <a href="https://www.123fakta.com/da/fakta-om-geder" target="_blank">Facts om geder</a>
                     </section>
 
                     <section>
                         <h3>Andre "G.O.A.T.'s"</h3>
+                        <div class="GoatKasse">
                         <a href="https://da.wikipedia.org/wiki/Lionel_Messi" target="_blank">Lionel Messi</a>
                         <a href="https://en.wikipedia.org/wiki/Tiger_Woods" targets="_blank">Tiger Woods</a>
                         <a href="https://en.wikipedia.org/wiki/Michael_Jordan" target="_blank">Michael Jorden</a>
-                        
+                        <div>
 
                     </section>
                 </div>
